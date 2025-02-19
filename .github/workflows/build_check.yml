@@ -1,0 +1,28 @@
+on:
+    pull_request:
+      branches:
+        - main
+    push:
+      branches:
+        - main
+name: "Build"
+jobs:
+    build:
+      name: Build 
+      runs-on: macos-latest
+      
+      steps:
+        - uses: actions/checkout@v3
+        - uses: subosito/flutter-action@v2
+          with:
+            channel: 'stable'
+            architecture: x64
+  
+        - name: Install dependencies
+          run: flutter pub get
+
+        - name: Analyze Code
+          run: flutter analyze
+
+        - name: Test
+          run: flutter test
