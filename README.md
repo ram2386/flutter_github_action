@@ -1,3 +1,3 @@
-# flutter_github_action
+# Flutter GitHub Action.
 
 A new Flutter project.
