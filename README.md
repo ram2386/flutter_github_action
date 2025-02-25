@@ -1,3 +1,3 @@
 # flutter_github_action
 
-A new Flutter project.
+Test Flutter Build Action.
